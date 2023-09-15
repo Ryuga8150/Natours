@@ -1,0 +1,21 @@
+header.header
+  nav.nav.nav--tours
+    //-<a href="#" class="nav__el">All tours</a>
+    a.nav__el(href="/") All tours
+  //For div element only . will work
+  .header__logo
+    img(src="/img/logo-white.png" alt="Natours logo") 
+  nav.nav.nav--user
+    if user
+      a.nav__el.nav__el--logout Log Out
+      a.nav__el(href="/me")
+        img.nav__user-img(src=`/img/users/${user.photo}` alt=`Photo of ${user.name}`) 
+        span= user.name.split(" ")[0]
+ 
+    //-changing from button element to a to add href
+    //- button.nav__el Log in
+    //- button.nav__el.nav__el--cta Sign up
+    else
+      a.nav__el(href='/login') Log in
+      a.nav__el.nav__el--cta(href='#') Sign up
+
