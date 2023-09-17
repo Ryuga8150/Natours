@@ -4,7 +4,7 @@ import { showAlert } from './alerts';
 //es6 module syntax for import export
 export const login = async (email, password) => {
   //console.log(email, password);
-  console.log('Login called');
+  //console.log('Login called');
   try {
     //whenever there is an error axios will throw that error
     //thus we can use try catch block here
